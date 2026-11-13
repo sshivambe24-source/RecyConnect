@@ -66,8 +66,8 @@ function LoginContent() {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-cream-50">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 sm:p-10 rounded-3xl border border-border shadow-elevation">
+    <div className="min-h-[85vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-forest-900 forest-grid-bg">
+      <div className="max-w-md w-full space-y-8 craft-card p-8 sm:p-10 rounded-3xl border border-craft-border shadow-elevation text-charcoal">
         {/* Brand Header */}
         <div className="text-center space-y-2">
           <div className="flex justify-center mb-2">

@@ -113,22 +113,22 @@ function ConnectionsContent() {
   };
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-teal">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-craft-yellow">
               <Repeat size={14} />
               <span>Deal Lifecycle & Transaction Coordination</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-brand-deep">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
               Connections & Status Tracker
             </h1>
           </div>
 
           {/* Legal Notice */}
-          <div className="p-3 rounded-2xl bg-white border border-border text-[11px] text-charcoal-muted max-w-md shadow-xs">
+          <div className="p-3 rounded-2xl craft-card border border-craft-border text-[11px] text-charcoal max-w-md shadow-xs">
             <strong>RecyConnect Model:</strong> We facilitate discovery and track workflow steps. Counterparties agree on commercial terms directly. RecyConnect does not take ownership of materials.
           </div>
         </div>
@@ -327,7 +327,7 @@ function ConnectionsContent() {
                         <div className="grid grid-cols-2 gap-2">
                           <input
                             type="number"
-                            placeholder="Agreed Price ($/unit)"
+                            placeholder="Agreed Price (₹/unit)"
                             value={newAgreedPrice}
                             onChange={(e) => setNewAgreedPrice(e.target.value)}
                             className="px-3 py-1.5 rounded-xl border border-border text-xs"

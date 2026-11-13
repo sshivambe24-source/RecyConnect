@@ -158,8 +158,8 @@ export const INITIAL_LISTINGS: MaterialListing[] = [
     location: 'Bhosari Industrial Area, Sector 7',
     region: 'Pune, Maharashtra',
     availabilityStatus: 'ready_now',
-    askingPrice: 195,
-    currency: 'USD',
+    askingPrice: 19500,
+    currency: 'INR',
     priceType: 'negotiable',
     images: [
       'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1000&q=80',
@@ -191,8 +191,8 @@ export const INITIAL_LISTINGS: MaterialListing[] = [
     location: 'Chakan Phase II, Logistics Hub',
     region: 'Pune, Maharashtra',
     availabilityStatus: 'in_stock',
-    askingPrice: 720,
-    currency: 'USD',
+    askingPrice: 72000,
+    currency: 'INR',
     priceType: 'fixed',
     images: [
       'https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?auto=format&fit=crop&w=1000&q=80',
@@ -224,8 +224,8 @@ export const INITIAL_LISTINGS: MaterialListing[] = [
     location: 'Pimpri Heavy Industrial Area',
     region: 'Pune, Maharashtra',
     availabilityStatus: 'ready_now',
-    askingPrice: 2150,
-    currency: 'USD',
+    askingPrice: 215000,
+    currency: 'INR',
     priceType: 'negotiable',
     images: [
       'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
@@ -258,7 +258,7 @@ export const INITIAL_LISTINGS: MaterialListing[] = [
     region: 'Pune, Maharashtra',
     availabilityStatus: 'recurring_weekly',
     askingPrice: null,
-    currency: 'USD',
+    currency: 'INR',
     priceType: 'on_request',
     images: [
       'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80',
@@ -290,8 +290,8 @@ export const INITIAL_LISTINGS: MaterialListing[] = [
     location: 'Talegaon Industrial Corridor',
     region: 'Pune, Maharashtra',
     availabilityStatus: 'ready_now',
-    askingPrice: 840,
-    currency: 'USD',
+    askingPrice: 84000,
+    currency: 'INR',
     priceType: 'negotiable',
     images: [
       'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=1000&q=80'
@@ -322,8 +322,8 @@ export const INITIAL_LISTINGS: MaterialListing[] = [
     location: 'Chakan MIDC Industrial Area',
     region: 'Pune, Maharashtra',
     availabilityStatus: 'ready_now',
-    askingPrice: 380,
-    currency: 'USD',
+    askingPrice: 38000,
+    currency: 'INR',
     priceType: 'fixed',
     images: [
       'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80'
@@ -367,15 +367,15 @@ export const INITIAL_CONNECTIONS: Connection[] = [
     requestedUnit: 'tonnes',
     initialMessage: 'Hello John, we are running our kraft board line next Tuesday and can accept 25 tonnes of your Grade A baled OCC at your quoted price. Can you accommodate standard 32ft container trucks for loading?',
     agreedQuantity: 25,
-    agreedPrice: 190,
-    currency: 'USD',
+    agreedPrice: 19000,
+    currency: 'INR',
     status: 'logistics_coordination',
     statusHistory: [
       {
         status: 'inquiry_sent',
         updatedAt: '2026-10-20T10:30:00Z',
         updatedBy: 'Elena Rostova',
-        note: 'Initial inquiry sent for 25 tonnes at $190/tonne target.',
+        note: 'Initial inquiry sent for 25 tonnes at ₹19,000/tonne target.',
       },
       {
         status: 'discussion',
@@ -387,7 +387,7 @@ export const INITIAL_CONNECTIONS: Connection[] = [
         status: 'terms_agreed',
         updatedAt: '2026-10-21T09:30:00Z',
         updatedBy: 'Elena Rostova',
-        note: 'Commercial price agreed at $190/tonne net of transport. Purchase order drafted.',
+        note: 'Commercial price agreed at ₹19,000/tonne net of transport. Purchase order drafted.',
       },
       {
         status: 'logistics_coordination',
@@ -424,8 +424,8 @@ export const INITIAL_CONNECTIONS: Connection[] = [
     requestedUnit: 'tonnes',
     initialMessage: 'Inquiring regarding full 14-tonne lot of washed PET flakes for our packaging polymer trial. Can you provide laboratory test sheet for PVC PPM?',
     agreedQuantity: 14,
-    agreedPrice: 710,
-    currency: 'USD',
+    agreedPrice: 71000,
+    currency: 'INR',
     status: 'terms_agreed',
     statusHistory: [
       {
@@ -444,7 +444,7 @@ export const INITIAL_CONNECTIONS: Connection[] = [
         status: 'terms_agreed',
         updatedAt: '2026-10-23T14:20:00Z',
         updatedBy: 'Elena Rostova',
-        note: 'Terms agreed at $710/tonne. Logistics pickup scheduling pending.',
+        note: 'Terms agreed at ₹71,000/tonne. Logistics pickup scheduling pending.',
       },
     ],
     logisticsDetails: null,
@@ -466,8 +466,8 @@ export const INITIAL_CONNECTIONS: Connection[] = [
     requestedUnit: 'tonnes',
     initialMessage: 'Completed previous delivery smoothly. Requesting final delivery confirmation.',
     agreedQuantity: 8,
-    agreedPrice: 830,
-    currency: 'USD',
+    agreedPrice: 83000,
+    currency: 'INR',
     status: 'completed',
     statusHistory: [
       {
@@ -480,7 +480,7 @@ export const INITIAL_CONNECTIONS: Connection[] = [
         status: 'terms_agreed',
         updatedAt: '2026-10-12T11:00:00Z',
         updatedBy: 'John Miller',
-        note: 'Price set at $830/tonne.',
+        note: 'Price set at ₹83,000/tonne.',
       },
       {
         status: 'logistics_coordination',
@@ -534,7 +534,7 @@ export const INITIAL_CONVERSATIONS: Conversation[] = [
     factoryId: 'user-factory-1',
     supplierName: 'Apex Scrap & Resource Recovery',
     factoryName: 'GreenCycle Pulp & Paper Industrial Mills',
-    lastMessageText: 'We have reviewed the batch lab test. We accept $710/tonne for the entire 14-tonne batch.',
+    lastMessageText: 'We have reviewed the batch lab test. We accept ₹71,000/tonne for the entire 14-tonne batch.',
     lastMessageAt: '2026-10-23T14:22:00Z',
     unreadCountSupplier: 1,
     unreadCountFactory: 0,
@@ -566,7 +566,7 @@ export const INITIAL_MESSAGES: Record<string, MessageItem[]> = {
       conversationId: 'conv-1',
       senderId: 'user-factory-1',
       senderName: 'Elena Rostova (GreenCycle)',
-      content: 'Superb. We agree on $190/tonne for the 25-tonne quantity. Can we schedule pickup for Friday morning?',
+      content: 'Superb. We agree on ₹19,000/tonne for the 25-tonne quantity. Can we schedule pickup for Friday morning?',
       read: true,
       createdAt: '2026-10-21T09:25:00Z',
     },
@@ -604,7 +604,7 @@ export const INITIAL_MESSAGES: Record<string, MessageItem[]> = {
       conversationId: 'conv-2',
       senderId: 'user-factory-1',
       senderName: 'Elena Rostova (GreenCycle)',
-      content: 'We have reviewed the batch lab test. We accept $710/tonne for the entire 14-tonne batch.',
+      content: 'We have reviewed the batch lab test. We accept ₹71,000/tonne for the entire 14-tonne batch.',
       read: false,
       createdAt: '2026-10-23T14:22:00Z',
     },
@@ -709,6 +709,16 @@ class RecyConnectStore {
 
   constructor() {
     this.isBrowser = typeof window !== 'undefined';
+    if (this.isBrowser) {
+      const ver = localStorage.getItem('recyconnect_cur_ver');
+      if (ver !== 'inr_100x_v3') {
+        localStorage.removeItem('recyconnect_listings');
+        localStorage.removeItem('recyconnect_connections');
+        localStorage.removeItem('recyconnect_conversations');
+        localStorage.removeItem('recyconnect_messages');
+        localStorage.setItem('recyconnect_cur_ver', 'inr_100x_v3');
+      }
+    }
   }
 
   private getItem<T>(key: string, fallback: T): T {

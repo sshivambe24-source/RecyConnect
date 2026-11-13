@@ -78,10 +78,10 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Profile Header Banner */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-border shadow-elevation relative overflow-hidden">
+        <div className="craft-card rounded-3xl p-6 sm:p-8 border border-craft-border shadow-elevation relative overflow-hidden">
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
             <div className="flex items-start gap-5">
               <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-brand-deep text-white font-extrabold text-2xl flex items-center justify-center flex-shrink-0 shadow-md">

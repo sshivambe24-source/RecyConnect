@@ -118,19 +118,19 @@ export default function MessagesPage() {
     : '';
 
   return (
-    <div className="bg-cream-50 min-h-[85vh] py-6">
+    <div className="bg-forest-900 forest-grid-bg min-h-[85vh] py-6 text-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         {/* Messages Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-extrabold text-brand-deep">Platform Direct Messaging</h1>
-            <p className="text-xs text-charcoal-muted">
+            <h1 className="text-2xl font-extrabold text-white">Platform Direct Messaging</h1>
+            <p className="text-xs text-forest-100/90">
               Direct counterparty communication linked to recyclable material lots and inquiries.
             </p>
           </div>
           <Link
             href="/connections"
-            className="text-xs font-bold text-brand-primary hover:underline flex items-center gap-1"
+            className="text-xs font-bold text-craft-yellow hover:underline flex items-center gap-1"
           >
             <Repeat size={14} />
             <span>View All Transaction Trackers</span>
@@ -138,7 +138,7 @@ export default function MessagesPage() {
         </div>
 
         {/* Messaging Workspace Grid */}
-        <div className="bg-white rounded-3xl border border-border shadow-elevation overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[580px]">
+        <div className="craft-card rounded-3xl border border-craft-border shadow-elevation overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[580px]">
           {/* Left Column: Conversations List */}
           <aside className="lg:col-span-4 border-r border-border flex flex-col h-full bg-cream-50/50">
             <div className="p-4 border-b border-border bg-white flex items-center justify-between">

@@ -24,19 +24,19 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-cream-50 min-h-screen py-12">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-12 text-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-teal">Support & Operations</span>
-          <h1 className="text-3xl font-extrabold text-brand-deep">Contact RecyConnect Operations</h1>
-          <p className="text-xs text-charcoal-muted max-w-xl mx-auto">
+          <span className="text-xs font-bold uppercase tracking-wider text-craft-yellow">Support & Operations</span>
+          <h1 className="text-3xl font-extrabold text-white">Contact RecyConnect Operations</h1>
+          <p className="text-xs text-forest-100/90 max-w-xl mx-auto">
             Get in touch with our marketplace operations team in Western Maharashtra for pilot onboarding, factory integrations, or dispute resolution.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-charcoal">
           {/* Contact Details */}
-          <div className="md:col-span-5 bg-white rounded-3xl p-8 border border-border shadow-xs space-y-6">
+          <div className="md:col-span-5 craft-card rounded-3xl p-8 border border-craft-border shadow-elevation space-y-6">
             <h3 className="text-sm font-bold text-charcoal uppercase tracking-wider">
               Pilot Headquarters
             </h3>
@@ -73,7 +73,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form */}
-          <div className="md:col-span-7 bg-white rounded-3xl p-8 border border-border shadow-elevation">
+          <div className="md:col-span-7 craft-card rounded-3xl p-8 border border-craft-border shadow-elevation text-charcoal">
             {submitted ? (
               <div className="py-12 text-center space-y-3">
                 <div className="w-12 h-12 rounded-full bg-teal-100 text-teal flex items-center justify-center mx-auto">

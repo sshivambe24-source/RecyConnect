@@ -46,18 +46,18 @@ export default function PublicProfilePage() {
   }
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <Link
           href="/materials"
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary hover:text-brand-hover"
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-craft-yellow hover:underline"
         >
           <ArrowLeft size={14} />
           <span>Back to Marketplace</span>
         </Link>
 
         {/* Public Card */}
-        <div className="bg-white rounded-3xl p-8 border border-border shadow-elevation space-y-6">
+        <div className="craft-card rounded-3xl p-8 border border-craft-border shadow-elevation space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-2xl bg-brand-deep text-white font-extrabold text-2xl flex items-center justify-center flex-shrink-0">

@@ -56,9 +56,9 @@ export const ListingCard: React.FC<ListingCardProps> = ({
       : 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80';
 
   return (
-    <div className="group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-cardHover transition-all duration-300 flex flex-col h-full hover:border-brand-lavender">
+    <div className="group craft-card rounded-2xl overflow-hidden hover:shadow-cardHover transition-all duration-300 flex flex-col h-full hover:border-forest-400">
       {/* Listing Media Header */}
-      <div className="relative h-48 w-full bg-cream-200 overflow-hidden">
+      <div className="relative h-48 w-full bg-forest-950/10 overflow-hidden">
         <Image
           src={primaryImage}
           alt={listing.title}
@@ -70,7 +70,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
 
         {/* Top Badges */}
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
-          <span className="px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase bg-brand-deep/90 text-white backdrop-blur-xs border border-white/20">
+          <span className="px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase bg-forest-900/90 text-white backdrop-blur-xs border border-white/20">
             {listing.categoryName}
           </span>
           {getAvailabilityBadge(listing.availabilityStatus)}
@@ -101,7 +101,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
         <div className="space-y-2">
           {/* Title */}
           <Link href={`/materials/${listing.id}`}>
-            <h3 className="text-base font-bold text-charcoal group-hover:text-brand-primary transition-colors line-clamp-2 leading-snug">
+            <h3 className="text-base font-bold text-charcoal group-hover:text-forest-700 transition-colors line-clamp-2 leading-snug">
               {listing.title}
             </h3>
           </Link>
@@ -121,19 +121,19 @@ export const ListingCard: React.FC<ListingCardProps> = ({
               <span className="truncate">{listing.location}, {listing.region}</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="inline-block w-2 h-2 rounded-full bg-teal flex-shrink-0" />
-              <span className="truncate font-medium text-teal-dark">Grade: {listing.qualityGrade}</span>
+              <span className="inline-block w-2 h-2 rounded-full bg-forest-600 flex-shrink-0" />
+              <span className="truncate font-medium text-forest-800">Grade: {listing.qualityGrade}</span>
             </div>
           </div>
         </div>
 
         {/* Price & Action Footer */}
-        <div className="pt-3 border-t border-border flex items-center justify-between gap-3">
+        <div className="pt-3 border-t border-craft-border flex items-center justify-between gap-3">
           <div>
             <span className="text-[10px] uppercase font-bold text-charcoal-muted tracking-wider block">
               Indicative Price
             </span>
-            <div className="text-sm font-extrabold text-brand-deep">
+            <div className="text-sm font-extrabold text-forest-900">
               {listing.priceType === 'on_request' ? (
                 <span className="text-charcoal-muted font-semibold text-xs">Price on request</span>
               ) : (
@@ -150,7 +150,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
           <div className="flex items-center gap-1.5">
             <Link
               href={`/materials/${listing.id}`}
-              className="p-2 rounded-xl text-charcoal-muted hover:text-brand-primary hover:bg-cream-100 transition-colors"
+              className="p-2 rounded-xl text-charcoal-muted hover:text-forest-700 hover:bg-craft-card transition-colors"
               title="View Complete Specifications"
             >
               <Eye size={17} />
@@ -159,7 +159,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
             {onSendInquiry ? (
               <button
                 onClick={() => onSendInquiry(listing)}
-                className="px-3.5 py-1.5 rounded-xl bg-brand-primary hover:bg-brand-hover text-white text-xs font-semibold shadow-xs transition-colors flex items-center gap-1"
+                className="px-3.5 py-1.5 rounded-xl bg-forest-800 hover:bg-forest-900 text-white text-xs font-semibold shadow-xs transition-colors flex items-center gap-1"
               >
                 <span>Inquire</span>
                 <ArrowRight size={13} />
@@ -167,7 +167,7 @@ export const ListingCard: React.FC<ListingCardProps> = ({
             ) : (
               <Link
                 href={`/materials/${listing.id}`}
-                className="px-3.5 py-1.5 rounded-xl bg-brand-subtle text-brand-primary hover:bg-brand-primary hover:text-white text-xs font-semibold transition-all flex items-center gap-1"
+                className="px-3.5 py-1.5 rounded-xl bg-forest-100 text-forest-800 hover:bg-forest-800 hover:text-white text-xs font-semibold transition-all flex items-center gap-1"
               >
                 <span>Details</span>
                 <ArrowRight size={13} />

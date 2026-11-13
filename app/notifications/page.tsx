@@ -65,13 +65,13 @@ export default function NotificationsPage() {
   const unreadCount = notifications.filter((n) => !n.read).length;
 
   return (
-    <div className="bg-cream-50 min-h-[85vh] py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-[85vh] py-8 text-charcoal">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-extrabold text-brand-deep">Notification Center</h1>
-            <p className="text-xs text-charcoal-muted">
+            <h1 className="text-2xl font-extrabold text-white">Notification Center</h1>
+            <p className="text-xs text-forest-100/90">
               Live updates on inquiries, match recommendations, verified credentials, and chat messages.
             </p>
           </div>
@@ -79,16 +79,16 @@ export default function NotificationsPage() {
           {unreadCount > 0 && (
             <button
               onClick={handleMarkAllAsRead}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-border text-xs font-bold text-charcoal hover:bg-cream-100 transition-colors shadow-xs"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full masking-tape border border-craft-border text-xs font-bold text-forest-950 transition-colors shadow-xs"
             >
-              <CheckCheck size={14} className="text-teal" />
+              <CheckCheck size={14} className="text-forest-800" />
               <span>Mark All as Read ({unreadCount})</span>
             </button>
           )}
         </div>
 
         {/* Notifications List */}
-        <div className="bg-white rounded-3xl border border-border shadow-elevation overflow-hidden divide-y divide-border">
+        <div className="craft-card rounded-3xl border border-craft-border shadow-elevation overflow-hidden divide-y divide-craft-border">
           {notifications.length === 0 ? (
             <div className="p-12 text-center text-xs text-charcoal-muted space-y-2">
               <Bell size={32} className="mx-auto text-charcoal-muted/50" />

@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-cream text-charcoal">
+      <body className="min-h-screen flex flex-col bg-forest-900 forest-grid-bg text-charcoal selection:bg-forest-700 selection:text-white">
         <DemoSwitcher />
         <Navbar />
         <main className="flex-1 flex flex-col">{children}</main>

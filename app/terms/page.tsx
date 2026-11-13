@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function TermsPage() {
   return (
-    <div className="bg-cream-50 min-h-screen py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 bg-white p-8 sm:p-12 rounded-3xl border border-border shadow-xs">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-12 text-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 craft-card p-8 sm:p-12 rounded-3xl border border-craft-border shadow-elevation text-charcoal">
         <div className="space-y-2 border-b border-border pb-4">
           <span className="text-[10px] font-bold uppercase tracking-wider text-teal">Legal Governance</span>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-brand-deep">Terms of Service</h1>

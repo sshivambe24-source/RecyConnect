@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-border shadow-xs">
+    <header className="sticky top-0 z-40 bg-craft-paper/95 backdrop-blur-md border-b border-craft-border shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18">
           {/* Brand Logo */}
@@ -94,8 +94,8 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-brand-primary ${
-                    isActive ? 'text-brand-primary font-semibold' : 'text-charcoal'
+                  className={`text-sm font-medium transition-colors hover:text-forest-800 ${
+                    isActive ? 'text-forest-900 font-bold border-b-2 border-forest-700 pb-0.5' : 'text-charcoal'
                   }`}
                 >
                   {link.name}
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
                 {currentUser.accountType === 'supplier' && (
                   <Link
                     href="/dashboard/supplier?action=new-listing"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-subtle text-brand-primary hover:bg-brand-lavender/50 text-xs font-semibold transition-colors border border-brand-lavender"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-craft-tape text-forest-950 hover:bg-[#d9ccb2] text-xs font-semibold transition-colors border border-craft-border shadow-xs"
                   >
                     <PlusCircle size={15} />
                     <span>List Material</span>
@@ -248,13 +248,13 @@ export const Navbar: React.FC = () => {
               <>
                 <Link
                   href="/login"
-                  className="px-4 py-2 text-sm font-semibold text-charcoal hover:text-brand-primary transition-colors"
+                  className="px-4 py-2 text-sm font-semibold text-charcoal hover:text-forest-900 transition-colors"
                 >
                   Sign In
                 </Link>
                 <Link
                   href="/signup"
-                  className="px-5 py-2.5 rounded-full bg-brand-primary hover:bg-brand-hover text-white text-sm font-semibold shadow-sm transition-all hover:shadow-card active:scale-[0.98]"
+                  className="px-5 py-2.5 rounded-full bg-forest-900 hover:bg-forest-950 text-white text-sm font-semibold shadow-sm transition-all hover:shadow-card active:scale-[0.98]"
                 >
                   Join RecyConnect
                 </Link>

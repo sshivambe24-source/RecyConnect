@@ -83,7 +83,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/60 backdrop-blur-xs animate-in fade-in duration-150">
-      <div className="bg-white rounded-3xl max-w-lg w-full shadow-elevation border border-border overflow-hidden">
+      <div className="craft-card rounded-3xl max-w-lg w-full shadow-elevation border border-craft-border overflow-hidden">
         {/* Modal Header */}
         <div className="px-6 py-4 border-b border-border flex items-center justify-between bg-cream-50">
           <div>

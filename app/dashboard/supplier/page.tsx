@@ -104,7 +104,7 @@ function SupplierDashboardContent() {
     setFormLocation(currentUser?.cityRegion || 'Pune, Maharashtra');
     setFormRegion('Pune, Maharashtra');
     setFormAvailability('ready_now');
-    setFormAskingPrice('200');
+    setFormAskingPrice('20000');
     setFormPriceType('negotiable');
     setFormPickupNotes('Forklift loading available on-site.');
     setFormImageUrl('');
@@ -187,7 +187,7 @@ function SupplierDashboardContent() {
         region: formRegion,
         availabilityStatus: formAvailability,
         askingPrice: formAskingPrice ? parseFloat(formAskingPrice) : null,
-        currency: 'USD',
+        currency: 'INR',
         priceType: formPriceType,
         images: [chosenImage],
         pickupDeliveryNotes: formPickupNotes,
@@ -217,30 +217,30 @@ function SupplierDashboardContent() {
   const completedCount = myConnections.filter((c) => c.status === 'completed').length;
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Dashboard Top Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
+              <span className="px-2.5 py-0.5 rounded-md masking-tape text-forest-950 text-xs font-bold uppercase tracking-wider border border-craft-border">
                 Supplier Workspace
               </span>
               {currentUser?.verificationStatus && (
                 <VerificationBadge status={currentUser.verificationStatus} size="sm" />
               )}
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-brand-deep">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
               {currentUser?.organizationName || 'Supplier Dashboard'}
             </h1>
-            <p className="text-xs text-charcoal-muted">
+            <p className="text-xs text-forest-100/90">
               Manage recyclable material inventory lots, respond to buyer inquiries, and coordinate dispatches.
             </p>
           </div>
 
           <button
             onClick={openCreateListing}
-            className="px-5 py-2.5 rounded-full bg-brand-primary hover:bg-brand-hover text-white text-xs font-bold shadow-xs transition-colors flex items-center justify-center gap-2 self-start sm:self-auto"
+            className="px-5 py-2.5 rounded-full bg-craft-yellow hover:bg-craft-ochre text-forest-950 text-xs font-bold shadow-xs transition-colors flex items-center justify-center gap-2 self-start sm:self-auto"
           >
             <PlusCircle size={16} />
             <span>Create Material Listing</span>
@@ -249,25 +249,25 @@ function SupplierDashboardContent() {
 
         {/* Real KPI Metrics Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
             <span className="text-[11px] font-bold text-charcoal-muted uppercase tracking-wider">Total Lots</span>
-            <div className="text-2xl font-extrabold text-brand-deep">{totalListings}</div>
+            <div className="text-2xl font-extrabold text-forest-900">{totalListings}</div>
             <p className="text-[10px] text-charcoal-muted">All published items</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
-            <span className="text-[11px] font-bold text-teal-dark uppercase tracking-wider">Active Lots</span>
-            <div className="text-2xl font-extrabold text-teal">{activeListings}</div>
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
+            <span className="text-[11px] font-bold text-forest-700 uppercase tracking-wider">Active Lots</span>
+            <div className="text-2xl font-extrabold text-forest-700">{activeListings}</div>
             <p className="text-[10px] text-charcoal-muted">Ready for procurement</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
-            <span className="text-[11px] font-bold text-purple-800 uppercase tracking-wider">Inquiries</span>
-            <div className="text-2xl font-extrabold text-brand-primary">{inquiriesCount}</div>
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
+            <span className="text-[11px] font-bold text-forest-800 uppercase tracking-wider">Inquiries</span>
+            <div className="text-2xl font-extrabold text-forest-800">{inquiriesCount}</div>
             <p className="text-[10px] text-charcoal-muted">From recycling mills</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
             <span className="text-[11px] font-bold text-blue-800 uppercase tracking-wider">In Progress</span>
             <div className="text-2xl font-extrabold text-blue-600">{activeConnectionsCount}</div>
             <p className="text-[10px] text-charcoal-muted">Negotiation & logistics</p>
@@ -724,7 +724,7 @@ function SupplierDashboardContent() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-bold text-charcoal mb-1">
-                    Indicative Price per Unit ($ USD)
+                    Indicative Price per Unit (₹ INR)
                   </label>
                   <input
                     type="number"

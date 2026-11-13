@@ -111,18 +111,18 @@ export default function AdminDashboardPage() {
   }
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-900 text-xs font-bold uppercase tracking-wider">
+              <span className="px-2.5 py-0.5 rounded-md masking-tape text-forest-950 text-xs font-bold uppercase tracking-wider border border-craft-border">
                 Compliance & Operations Portal
               </span>
-              <span className="text-xs text-teal font-semibold">Active Session: {currentUser.displayName}</span>
+              <span className="text-xs text-craft-yellow font-semibold">Active Session: {currentUser.displayName}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-brand-deep">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
               Platform Administration
             </h1>
           </div>
@@ -130,21 +130,21 @@ export default function AdminDashboardPage() {
 
         {/* Real Platform KPI Metrics (No fabricated data) */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
             <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider">Verifications Queue</span>
             <div className="text-2xl font-extrabold text-amber-600">{pendingVerificationCount} Pending</div>
             <p className="text-[10px] text-charcoal-muted">Awaiting document audit</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
-            <span className="text-[11px] font-bold text-teal-dark uppercase tracking-wider">Active Inventory</span>
-            <div className="text-2xl font-extrabold text-teal">{listings.filter((l) => l.isPublished).length} Lots</div>
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
+            <span className="text-[11px] font-bold text-forest-700 uppercase tracking-wider">Active Inventory</span>
+            <div className="text-2xl font-extrabold text-forest-700">{listings.filter((l) => l.isPublished).length} Lots</div>
             <p className="text-[10px] text-charcoal-muted">Published across pilot</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-border shadow-xs space-y-1">
-            <span className="text-[11px] font-bold text-brand-primary uppercase tracking-wider">Total Deals</span>
-            <div className="text-2xl font-extrabold text-brand-primary">{connections.length}</div>
+          <div className="craft-card rounded-2xl p-5 border border-craft-border shadow-card space-y-1">
+            <span className="text-[11px] font-bold text-forest-800 uppercase tracking-wider">Total Deals</span>
+            <div className="text-2xl font-extrabold text-forest-800">{connections.length}</div>
             <p className="text-[10px] text-charcoal-muted">Facilitated connections</p>
           </div>
 

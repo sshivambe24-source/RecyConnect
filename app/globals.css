@@ -3,46 +3,84 @@
 @tailwind utilities;
 
 :root {
-  --color-cream: #F8F6F0;
-  --color-brand-deep: #38205F;
-  --color-brand-primary: #6845A0;
-  --color-teal: #2E7775;
-  --color-charcoal: #25232B;
+  --color-forest-bg: #183826;
+  --color-forest-grid: rgba(140, 215, 170, 0.15);
+  --color-paper: #fcfbf7;
+  --color-brand-primary: #235339;
+  --color-brand-hover: #1e4832;
+  --color-charcoal: #1c2520;
 }
 
 body {
-  background-color: #F8F6F0;
-  color: #25232B;
+  background-color: #183826;
+  background-image: 
+    linear-gradient(to right, rgba(140, 215, 170, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(140, 215, 170, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: #1c2520;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom scrollbars */
+/* Authentic Green Graph Paper Grid Background from Reference Image */
+.forest-grid-bg {
+  background-color: #183826;
+  background-image: 
+    linear-gradient(to right, rgba(140, 215, 170, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(140, 215, 170, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.forest-grid-dense {
+  background-color: #153222;
+  background-image: 
+    linear-gradient(to right, rgba(140, 215, 170, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(140, 215, 170, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Craft Paper Card with Subtle Parchment Texture */
+.craft-card {
+  background-color: #fcfbf7;
+  border: 1px solid #ded7c9;
+  box-shadow: 0 4px 18px -2px rgba(12, 30, 20, 0.12), 0 2px 6px -1px rgba(12, 30, 20, 0.08);
+}
+
+/* Masking Tape Decoration inspired by reference photo */
+.masking-tape {
+  background: #e5d9c2;
+  color: #3f311a;
+  border-top: 1px dashed rgba(180, 160, 130, 0.6);
+  border-bottom: 1px dashed rgba(180, 160, 130, 0.6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F6F0;
+  background: #183826;
 }
 ::-webkit-scrollbar-thumb {
-  background: #DCD4EC;
+  background: #2e734c;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6845A0;
+  background: #3d8e60;
 }
 
-/* Subtle gradient banner accent */
+/* Gradient accents aligned with forest palette */
 .gradient-accent {
-  background: linear-gradient(135deg, #38205F 0%, #6845A0 50%, #2E7775 100%);
+  background: linear-gradient(135deg, #183826 0%, #235339 50%, #277a54 100%);
 }
 
 .gradient-teal {
-  background: linear-gradient(135deg, #2E7775 0%, #3BA19E 100%);
+  background: linear-gradient(135deg, #277a54 0%, #3d8e60 100%);
 }
 
 .gradient-subtle {
-  background: linear-gradient(180deg, rgba(220, 212, 236, 0.3) 0%, rgba(248, 246, 240, 1) 100%);
+  background: linear-gradient(180deg, rgba(216, 236, 224, 0.3) 0%, rgba(252, 251, 247, 1) 100%);
 }

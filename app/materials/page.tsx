@@ -169,24 +169,24 @@ function MaterialsContent() {
   };
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Header Title & Subtitle */}
         <div className="space-y-2">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-teal">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-craft-yellow">
             <Sparkles size={14} />
             <span>Digital Recyclable-Materials Marketplace</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Explore Recyclable Materials
           </h1>
-          <p className="text-sm text-charcoal-muted max-w-2xl">
+          <p className="text-sm text-forest-100/90 max-w-2xl">
             Browse verified listings from certified industrial aggregators and sorting yards across Western Maharashtra.
           </p>
         </div>
 
         {/* Search Bar & Quick Category Buttons */}
-        <div className="bg-white rounded-3xl p-4 sm:p-5 border border-border shadow-xs space-y-4">
+        <div className="craft-card rounded-3xl p-4 sm:p-5 border border-craft-border shadow-elevation space-y-4">
           <div className="flex flex-col sm:flex-row items-center gap-3">
             {/* Search Input */}
             <div className="relative flex-1 w-full">
@@ -196,7 +196,7 @@ function MaterialsContent() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by material title, grade, polymer type, location, or supplier..."
-                className="w-full pl-11 pr-4 py-2.5 rounded-2xl bg-cream-100 border border-border focus:outline-hidden focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary text-xs font-medium placeholder:text-charcoal-muted"
+                className="w-full pl-11 pr-4 py-2.5 rounded-2xl bg-white border border-craft-border focus:outline-hidden focus:ring-2 focus:ring-forest-600/20 focus:border-forest-600 text-xs font-medium placeholder:text-charcoal-muted"
               />
               {searchQuery && (
                 <button
@@ -211,7 +211,7 @@ function MaterialsContent() {
             {/* Mobile Filter Toggle Button */}
             <button
               onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
-              className="lg:hidden w-full sm:w-auto px-4 py-2.5 rounded-2xl border border-border bg-cream-50 text-charcoal text-xs font-bold flex items-center justify-center gap-2 hover:bg-cream-100"
+              className="lg:hidden w-full sm:w-auto px-4 py-2.5 rounded-2xl border border-craft-border bg-craft-card text-charcoal text-xs font-bold flex items-center justify-center gap-2 hover:bg-cream-100"
             >
               <SlidersHorizontal size={15} />
               <span>Filters {hasActiveFilters && '(Active)'}</span>
@@ -224,8 +224,8 @@ function MaterialsContent() {
               onClick={() => setSelectedCategory('all')}
               className={`px-3.5 py-1.5 rounded-full font-semibold transition-colors flex-shrink-0 ${
                 selectedCategory === 'all'
-                  ? 'bg-brand-deep text-white shadow-xs'
-                  : 'bg-cream-100 text-charcoal hover:bg-cream-200'
+                  ? 'bg-forest-900 text-white shadow-xs'
+                  : 'bg-craft-card border border-craft-border text-charcoal hover:bg-white'
               }`}
             >
               All Categories ({listings.length})
@@ -239,8 +239,8 @@ function MaterialsContent() {
                   onClick={() => setSelectedCategory(cat.slug)}
                   className={`px-3.5 py-1.5 rounded-full font-semibold transition-colors flex-shrink-0 ${
                     isSelected
-                      ? 'bg-brand-primary text-white shadow-xs'
-                      : 'bg-cream-100 text-charcoal hover:bg-cream-200'
+                      ? 'bg-forest-800 text-white shadow-xs'
+                      : 'bg-craft-card border border-craft-border text-charcoal hover:bg-white'
                   }`}
                 >
                   {cat.name} ({count})
@@ -256,7 +256,7 @@ function MaterialsContent() {
           <aside
             className={`lg:block ${
               mobileFiltersOpen ? 'block' : 'hidden'
-            } bg-white rounded-3xl p-6 border border-border shadow-xs space-y-6 h-fit sticky top-24`}
+            } craft-card rounded-3xl p-6 border border-craft-border shadow-elevation space-y-6 h-fit sticky top-24 text-charcoal`}
           >
             <div className="flex items-center justify-between border-b border-border pb-3">
               <div className="flex items-center gap-2 font-bold text-sm text-charcoal">

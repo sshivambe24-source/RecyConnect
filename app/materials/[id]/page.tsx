@@ -95,13 +95,13 @@ export default function ListingDetailPage() {
   const isOwner = currentUser?.id === listing.supplierId;
 
   return (
-    <div className="bg-cream-50 min-h-screen py-8">
+    <div className="bg-forest-900 forest-grid-bg min-h-screen py-8 text-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Navigation Breadcrumb */}
         <div className="flex items-center justify-between">
           <Link
             href="/materials"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary hover:text-brand-hover transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-craft-yellow hover:underline transition-colors"
           >
             <ArrowLeft size={15} />
             <span>Back to All Materials</span>
@@ -109,7 +109,7 @@ export default function ListingDetailPage() {
 
           <button
             onClick={handleShare}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-border text-xs font-semibold text-charcoal hover:bg-cream-100 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full masking-tape border border-craft-border text-xs font-semibold text-forest-950 shadow-xs transition-colors"
           >
             <Share2 size={13} />
             <span>{copiedLink ? 'Link Copied!' : 'Share Listing'}</span>
@@ -155,7 +155,7 @@ export default function ListingDetailPage() {
             )}
 
             {/* Description & Detailed Specs Card */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-border shadow-xs space-y-6">
+            <div className="craft-card rounded-3xl p-6 sm:p-8 border border-craft-border shadow-elevation space-y-6 text-charcoal">
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider text-teal mb-2">
                   Material Overview & Specifications
@@ -234,7 +234,7 @@ export default function ListingDetailPage() {
           {/* Right Column: Pricing, Supplier Info, Actions */}
           <div className="lg:col-span-5 space-y-6 sticky top-24">
             {/* Commercial Terms & Action Card */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-border shadow-elevation space-y-6">
+            <div className="craft-card rounded-3xl p-6 sm:p-8 border border-craft-border shadow-elevation space-y-6 text-charcoal">
               <div>
                 <h1 className="text-xl sm:text-2xl font-extrabold text-brand-deep leading-snug">
                   {listing.title}
@@ -327,12 +327,12 @@ export default function ListingDetailPage() {
 
         {/* Related Material Listings */}
         {relatedListings.length > 0 && (
-          <div className="pt-12 border-t border-border space-y-6">
+          <div className="pt-12 border-t border-forest-800 space-y-6">
             <div>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-teal">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-craft-yellow">
                 SIMILAR RECYCLABLES
               </h3>
-              <p className="text-xl font-extrabold text-brand-deep mt-0.5">
+              <p className="text-xl font-extrabold text-white mt-0.5">
                 More in {listing.categoryName}
               </p>
             </div>
